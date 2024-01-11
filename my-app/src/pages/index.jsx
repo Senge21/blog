@@ -1,10 +1,9 @@
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/styles.module.css";
 
 export default function Home() {
   return (
     <>
-      <div>Pinecone</div>
-      <div>Pinecone</div>
+      <div className={`${styles.box} ${styles.bgRed}`}>hahHAhahahahah</div>
     </>
   );
 }
