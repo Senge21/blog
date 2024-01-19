@@ -3,7 +3,7 @@ export const Header = () => {
   return (
     <div className="w-full h-[68px] bg-[#ffffff] py-[16px] px-[80px] *:group-[font-['Inter_Sans']  justify-between">
       <div className="flex justify-between w-[1280px] h-[36px] px-[32px]">
-        <div className="w-[96px] h-[36px] text-[#111827] font-[900] text-sm/[36px] text-[35px] text-center ">
+        <div className=" w-[96px] h-[36px] text-[#111827] font-[900] text-sm/[100px] text-[36px] text-center ">
           {"<SS/>"}
         </div>
         <div className="w-[554px] h-[36px] ">
