@@ -15,7 +15,11 @@ export default function Home() {
       <div className="">
         <Header />
         <Profile />
-       <About/>
+        <About />
+        <Skills />
+        <Experience />
+
+        <Footer />
       </div>
     </div>
   );

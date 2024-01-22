@@ -6,3 +6,5 @@ export * from "./GetInTouch";
 export * from "./Profile";
 export * from "./Skills";
 export * from "./Work";
+
+// export const Js = require("");
