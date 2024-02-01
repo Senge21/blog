@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/components/layout/footerLogo/Logo.svg";
+import Facebook from "@/components/layout/footerLogo/facebook.svg"
+import Twitter from "@/components/layout/footerLogo/Twitter.png"
+import Instagram from "@/components/layout/footerLogo/Instagram.png"
+import Linkedin from "@/components/layout/footerLogo/Linkedin.png"
 
 export const Footer = () => {
   return (
@@ -61,11 +65,11 @@ export const Footer = () => {
           </div>
         </div>
         <div class="w-36 relative">
-          <div class="w-4 h-4 left-0 top-0 absolute flex-col justify-start items-start inline-flex"></div>
-          <div class="w-4 h-4 left-[42.67px] top-0 absolute flex-col justify-start items-start inline-flex"></div>
-          <div class="w-4 h-4 left-[85.33px] top-0 absolute flex-col justify-start items-start inline-flex">
-            {/* <Image src={} className="w-4 h-4 relative"/> */}
-          </div>
+          <Image src={Facebook} class="w-4 h-4  absolute top-0 flex-col justify-start items-start inline-flex"></Image>
+          <Image src={Twitter} class="w-4 h-4 left-[42.67px] top-0 absolute flex-col justify-start items-start inline-flex"></Image>
+          <Image src={Instagram} class="w-4 h-4 left-[85.33px] top-0 absolute flex-col justify-start items-start inline-flex" />
+          <Image src={Linkedin} className="w-4 h-4 right-0 top-0 absolute" />
+
           <div class="w-4 h-4 left-[128px] top-0 absolute flex-col justify-start items-start inline-flex"></div>
         </div>
       </div>

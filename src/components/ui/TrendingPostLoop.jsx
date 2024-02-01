@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Rectangle from "@/components/layout/SlideImg/Rectangle.png";
+import { useEffect, useState } from "react";
 
 export const TrendingPostLoop = () => {
   return (

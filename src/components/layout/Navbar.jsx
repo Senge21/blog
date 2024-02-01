@@ -15,10 +15,8 @@ export const Navbar = () => {
             <Link href={"Contact"}>Contact</Link>
           </div>
           <div className="justify-start items-center gap-10 flex">
-            <div className="h-9 pl-4 pr-2 py-2 bg-zinc-100 rounded-[5px] justify-start items-center gap-3 flex">
-              <div className="grow shrink basis-0 text-zinc-400 text-sm font-normal font-['Inter'] leading-tight">
-                Search
-              </div>
+            <div className="flex h-[36px] rounded-[5px] p-[8px] bg-[#f4f4f5] ">
+              <input type="search " name="search" id="search " placeholder="Search " className="font-[400] bg-[#f4f4f5] size-[14px] leading-[20px] text-align text-[#a1a1aa] w-full h-secreen " />
               <Image src={search} className="w-4 h-4" />
             </div>
           </div>

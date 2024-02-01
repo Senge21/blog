@@ -1,5 +1,5 @@
 import { Slide } from "@/components/layout/Slide.jsx";
-import { TrendingPost } from ".";
+import { TrendingPost } from "@/components/layout/TrendingPost";
 
 export const Content = () => {
   return (
