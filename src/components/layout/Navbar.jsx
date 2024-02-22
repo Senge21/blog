@@ -10,13 +10,19 @@ export const Navbar = () => {
         <Image src={Logo} className="w-[158px] h-9 relative" />
         <div className="h-full w-[854px] justify-start items-center gap-[21px] flex">
           <div className="flex w-[667px] h-[6] gap-10 justify-center items-center  ">
-            <Link href={"Home"}>Home</Link>
-            <Link href={"Blog"}>Blog</Link>
-            <Link href={"Contact"}>Contact</Link>
+            <Link href={"http://localhost:3000/"}>Home</Link>
+            <Link href={"http://localhost:3000/blogListening"}>Blog</Link>
+            <Link href={"http://localhost:3000/contact"}>Contact</Link>
           </div>
           <div className="justify-start items-center gap-10 flex">
             <div className="flex h-[36px] rounded-[5px] p-[8px] bg-[#f4f4f5] ">
-              <input type="search " name="search" id="search " placeholder="Search " className="font-[400] bg-[#f4f4f5] size-[14px] leading-[20px] text-align text-[#a1a1aa] w-full h-secreen " />
+              <input
+                type="search "
+                name="search"
+                id="search "
+                placeholder="Search "
+                className="font-[400] bg-[#f4f4f5] size-[14px] leading-[20px] text-align text-[#a1a1aa] w-full h-secreen "
+              />
               <Image src={search} className="w-4 h-4" />
             </div>
           </div>
