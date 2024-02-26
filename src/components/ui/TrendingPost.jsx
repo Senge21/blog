@@ -1,9 +1,9 @@
 import { TrendingPostLoop } from "./TrendingPostLoop";
 
-export const TrendingPost = ({ articles }) => {
+export const TrendingPost = (article) => {
   return (
     <>
-      {articles.map((article, index) => {
+      {/* {article.map((article, index) => {
         return (
           <div
             key={index}
@@ -18,7 +18,7 @@ export const TrendingPost = ({ articles }) => {
             <div className="justify-start items-start gap-5 inline-flex"></div>
           </div>
         );
-      })}
+      })} */}
     </>
   );
 };

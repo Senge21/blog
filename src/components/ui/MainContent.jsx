@@ -1,6 +1,6 @@
 export const MainContent = (article) => {
   return (
-    <div className="w-full h-full flex justify-center">
+    <div className=" hidden w-full h-full md:flex justify-center">
       <div className="w-[1216px] h-[1585px] flex-col justify-center items-center inline-flex flex-wrap">
         <div className="self-stretch flex-col justify-start items-center gap-20 inline-flex">
           <div className="flex-col justify-start items-center gap-8 flex">

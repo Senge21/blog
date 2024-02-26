@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export const Slide = ({ articles }) => {
   return (
-    <div className="w-[1216px] h-[651px] relative">
-      {articles.map((article, index) => (
+    <div className="max-w-[1216px] h-[651px] relative">
+      {/* {articles.map((article, index) => (
         <div key={index} className="w-[1216px] h-[651px] relative">
           <Image
             src={article.cover_image}
@@ -36,7 +36,7 @@ export const Slide = ({ articles }) => {
             <div className="w-10 h-10 rounded-md border border-zinc-500"></div>
           </div>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };

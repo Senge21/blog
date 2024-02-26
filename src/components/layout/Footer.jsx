@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/components/layout/footerLogo/Logo.svg";
-import Facebook from "@/components/layout/footerLogo/facebook.svg"
-import Twitter from "@/components/layout/footerLogo/Twitter.png"
-import Instagram from "@/components/layout/footerLogo/Instagram.png"
-import Linkedin from "@/components/layout/footerLogo/Linkedin.png"
+import Facebook from "@/components/layout/footerLogo/facebook.svg";
+import Twitter from "@/components/layout/footerLogo/Twitter.png";
+import Instagram from "@/components/layout/footerLogo/Instagram.png";
+import Linkedin from "@/components/layout/footerLogo/Linkedin.png";
 
 export const Footer = () => {
   return (
-    <div className="w-full  h-[495px]  pt-16 bg-neutral-100 border-t border-gray-200 flex-col justify-center items-center gap-[25px] inline-flex">
-      <div className="w-[1215px] px-auto justify-start items-starts gap-5 inline-flex">
-        <div className="w-[289px] flex-col justify-start items-start gap-6 inline-flex">
+    <div className="w-full  h-[495px]  pt-16 bg-neutral-100 border-t border-gray-200 flex-col justify-center items-center gap-[25px] flex">
+      <div className="max-w-[1215px] px-auto justify-start items-starts gap-5 inline-flex flex-col md:flex-row ">
+        <div className="w-[289px]  flex-col justify-between items-start gap-6 hidden md:flex ">
           <div className="flex-col justify-start items-start gap-3 flex">
             <div className="text-gray-900 text-lg font-semibold  leading-7">
               About
@@ -42,21 +42,21 @@ export const Footer = () => {
         </div>
         <div className="h-[88px] justify-center items-start gap-20 flex">
           <div className="flex-col justify-start items-start gap-6 inline-flex">
-            <div className="flex-col justify-start items-start gap-2 flex">
+            <div className="flex-col justify-start items-start gap-2 flex ">
               <Link
-                href="Home"
-                className="text-zinc-700 text-base font-normal  leading-normal"
+                href="http://localhost:3000/"
+                className="text-zinc-700 text-base font-normal  leading-normal "
               >
                 Home
               </Link>
               <Link
-                href="Blog"
+                href="http://localhost:3000/blogListening"
                 className="text-zinc-700 text-base font-normal  leading-normal"
               >
                 Blog
               </Link>
               <Link
-                href="Contact"
+                href="http://localhost:3000/contact"
                 className="text-zinc-700 text-base font-normal  leading-normal"
               >
                 Contact
@@ -65,32 +65,46 @@ export const Footer = () => {
           </div>
         </div>
         <div className="w-36 relative">
-          <Image src={Facebook} className="w-4 h-4  absolute top-0 flex-col justify-start items-start inline-flex"></Image>
-          <Image src={Twitter} className="w-4 h-4 left-[42.67px] top-0 absolute flex-col justify-start items-start inline-flex"></Image>
-          <Image src={Instagram} className="w-4 h-4 left-[85.33px] top-0 absolute flex-col justify-start items-start inline-flex" />
+          <Image
+            src={Facebook}
+            className="w-4 h-4  absolute top-0 flex-col justify-start items-start inline-flex"
+          ></Image>
+          <Image
+            src={Twitter}
+            className="w-4 h-4 left-[42.67px] top-0 absolute flex-col justify-start items-start inline-flex"
+          ></Image>
+          <Image
+            src={Instagram}
+            className="w-4 h-4 left-[85.33px] top-0 absolute flex-col justify-start items-start inline-flex"
+          />
           <Image src={Linkedin} className="w-4 h-4 right-0 top-0 absolute" />
 
           <div className="w-4 h-4 left-[128px] top-0 absolute flex-col justify-start items-start inline-flex"></div>
         </div>
       </div>
-      <div className="w-[1216px] h-[95px] py-8 border-t border-zinc-200 justify-start items-center gap-16 inline-flex">
+      <div className="max-w-[1216px] h-[95px] py-8 border-t border-zinc-200 justify-start items-center gap-16 inline-flex">
         <div className="justify-start items-center gap-2.5 flex">
           <div className="flex-col justify-start items-start gap-0.5 inline-flex">
             <div className="flex ">
               <Image src={Logo} />
-              <p className="text-gray-900 text-xl font-normal font-['Plus Jakarta Sans'] leading-7">
-                Meta
-              </p>
-              <p className="text-gray-900 text-xl font-extrabold font-['Plus Jakarta Sans'] leading-7">
-                Blog
-              </p>
+
+              <div>
+                <div className="flex">
+                  <p className="text-gray-900 text-xl font-normal font-['Plus Jakarta Sans'] leading-7">
+                    Meta
+                  </p>
+                  <p className="text-gray-900 text-xl font-extrabold font-['Plus Jakarta Sans'] leading-7">
+                    Blog
+                  </p>
+                </div>
+                <p className="text-zinc-700 text-base font-normal  leading-normal">
+                  © All Rights Reserved.
+                </p>
+              </div>
             </div>
-            <p className="text-zinc-700 text-base font-normal  leading-normal">
-              © All Rights Reserved.
-            </p>
           </div>
         </div>
-        <div className="grow shrink basis-0 h-6 justify-end items-center gap-4 flex">
+        <div className="grow shrink basis-0 h-6 justify-end items-center gap-4  hidden md:flex">
           <p className="text-zinc-700 text-base font-normal  leading-normal">
             Terms of Use
           </p>
