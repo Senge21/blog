@@ -1,3 +1,5 @@
+
+
 export const MainContent = (article) => {
   return (
     <div className=" hidden w-full h-full md:flex justify-center">

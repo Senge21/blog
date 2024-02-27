@@ -1,12 +1,22 @@
 import Image from "next/image";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-export const Slide = ({ articles }) => {
+export const Slide = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://dev.to/api/articles?per_page=4&top=1")
+      .then((res) => setData(res.data));
+  }, []);
+
   return (
     <div className="max-w-[1216px] h-[651px] relative">
-      {/* {articles.map((article, index) => (
+      {/* {data.map((article, index) => (
         <div key={index} className="w-[1216px] h-[651px] relative">
           <Image
-            src={article.cover_image}
+            src={article.social_image}
             width={1216}
             height={600}
             className="w-[1216px] h-[600px] left-0 top-0 absolute bg-gray-900 bg-opacity-40 rounded-xl"
