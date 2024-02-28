@@ -1,9 +1,11 @@
 import Image from "next/image";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 export const Slide = () => {
   const [data, setData] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     axios
@@ -11,10 +13,27 @@ export const Slide = () => {
       .then((res) => setData(res.data));
   }, []);
 
+  const goToPrevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? data.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === data.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-    <div className="max-w-[1216px] h-[651px] relative">
-      {/* {data.map((article, index) => (
-        <div key={index} className="w-[1216px] h-[651px] relative">
+    <div className="max-w-[1216px] h-[651px] relative hidden md:flex">
+      {data.map((article, index) => (
+        <div
+          key={index}
+          className={`w-[1216px] h-[651px] relative ${
+            index === currentIndex ? "block" : "hidden"
+          }`}
+        >
           <Image
             src={article.social_image}
             width={1216}
@@ -39,14 +58,18 @@ export const Slide = () => {
               </div>
             </div>
           </div>
-          <div className="w-10 h-10 left-[1176px] top-[611px] absolute rounded-md justify-center items-center inline-flex">
-            <div className="w-10 h-10 rounded-md border border-zinc-500"></div>
-          </div>
-          <div className="w-10 h-10 left-[1127px] top-[611px] absolute rounded-md justify-center items-center inline-flex">
-            <div className="w-10 h-10 rounded-md border border-zinc-500"></div>
-          </div>
         </div>
-      ))} */}
+      ))}
+      <BsChevronCompactLeft
+        size={40}
+        className="w-10 h-10 left-[1127px] top-[611px] absolute rounded-md  border border-zinc-500 justify-center items-center inline-flex"
+        onClick={goToPrevSlide}
+      />
+      <BsChevronCompactRight
+        className="w-10 h-10 top-[611px] absolute left-[1180px] rounded-md border border-zinc-500"
+        size={40}
+        onClick={goToNextSlide}
+      />
     </div>
   );
 };

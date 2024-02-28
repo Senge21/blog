@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <div className="w-full  h-[100px]   py-8 flex-col  items-start gap-2.5 inline-flex mx-auto">
       <div className=" max-w-[1130px] justify-start items-start gap-[118px] inline-flex mx-auto">
-        <Image src={Logo} className="w-[158px] h-9 relative" />
+        <Image src={Logo} alt="logo" className="w-[158px] h-9 relative" />
         <div className="h-full w-[854px] hidden md:flex justify-start items-center gap-[21px] ">
           <div className="hidden w-[667px] md:flex  h-[6] gap-10 justify-center items-center  ">
             <Link href={"http://localhost:3000/"}>Home</Link>
@@ -24,7 +24,7 @@ export const Navbar = () => {
                 placeholder="Search "
                 className="font-[400] bg-[#f4f4f5] size-[14px] leading-[20px] text-align text-[#a1a1aa] w-full h-secreen "
               />
-              <Image src={search} className="w-4 h-4" />
+              <Image alt="search" src={search} className="w-4 h-4" />
             </div>
           </div>
         </div>

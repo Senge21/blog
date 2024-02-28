@@ -66,18 +66,25 @@ export const Footer = () => {
         </div>
         <div className="w-36 relative">
           <Image
+            alt="facebook"
             src={Facebook}
             className="w-4 h-4  absolute top-0 flex-col justify-start items-start inline-flex"
           ></Image>
           <Image
+            alt="twitter"
             src={Twitter}
             className="w-4 h-4 left-[42.67px] top-0 absolute flex-col justify-start items-start inline-flex"
           ></Image>
           <Image
+            alt="instagram"
             src={Instagram}
             className="w-4 h-4 left-[85.33px] top-0 absolute flex-col justify-start items-start inline-flex"
           />
-          <Image src={Linkedin} className="w-4 h-4 right-0 top-0 absolute" />
+          <Image
+            alt="linkedin"
+            src={Linkedin}
+            className="w-4 h-4 right-0 top-0 absolute"
+          />
 
           <div className="w-4 h-4 left-[128px] top-0 absolute flex-col justify-start items-start inline-flex"></div>
         </div>
@@ -86,7 +93,7 @@ export const Footer = () => {
         <div className="justify-start items-center gap-2.5 flex">
           <div className="flex-col justify-start items-start gap-0.5 inline-flex">
             <div className="flex ">
-              <Image src={Logo} />
+              <Image alt="logo" src={Logo} />
 
               <div>
                 <div className="flex">
